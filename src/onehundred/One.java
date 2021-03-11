@@ -1,4 +1,8 @@
 package onehundred;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * 分解质因数
  * @author TKQ
