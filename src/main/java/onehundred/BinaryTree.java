@@ -10,7 +10,7 @@ import java.util.Stack;
  *
  */
 public class BinaryTree {
-	
+
 	public static void main(String[] args) {
 		TreeNode node5=new TreeNode( null, null,5);
 		TreeNode node4=new TreeNode( null, node5,4);
@@ -46,8 +46,8 @@ public class BinaryTree {
 		queue.offer(node);
 		while(!queue.isEmpty()) {
 			TreeNode treeNode = queue.poll();
-			System.out.println(treeNode.getData());			
-			
+			System.out.println(treeNode.getData());
+
 			if (treeNode.getLeft()!=null) {
 				node=treeNode.getLeft();
 				queue.add(node);
@@ -55,9 +55,9 @@ public class BinaryTree {
 			if (treeNode.getRight()!=null) {
 				node=treeNode.getRight();
 				queue.add(node);}
-				;//右 节点不为空，放入队列		
+				;//右 节点不为空，放入队列
 		}
-		
+
 	}
 	public static Object searchNode(TreeNode node ,Object o) {//查找节点
 		if (node==null) {
@@ -89,14 +89,14 @@ public class BinaryTree {
 			while (root!=null) {
 				System.out.print(root.getData()+" ");//此处前序遍历
 				stack.add(root);
-				root=root.getLeft();//			
+				root=root.getLeft();//
 			}
 			root=stack.pop();////此处中序遍历
 //			System.out.print(root.getData()+" ");
 			root=root.getRight();
 		}
 		}
-	
+
 }
 class TreeNode{
 	public TreeNode left;
@@ -126,5 +126,5 @@ class TreeNode{
 		this.right = right;
 		this.data = data;
 	}
-	
+
 }
